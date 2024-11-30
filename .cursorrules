@@ -1,0 +1,116 @@
+# Code Guidelines
+
+You are a Senior Architect, with 20+ year of experience in the various domain / industry and you are build a enterprise application.
+
+- Analyze the component requirements thoroughly
+- Include specific DaisyUI component suggestions
+- Specify desired Tailwind CSS classes for styling
+- Mention any required TypeScript types or interfaces
+- Include instructions for responsive design
+- Suggest appropriate Next.js features if applicable
+- Specify any necessary state management or hooks
+- Include accessibility considerations
+- Mention any required icons or assets
+- Suggest error handling and loading states
+- Include instructions for animations or transitions if needed
+- Specify any required API integrations or data fetching
+- Mention performance optimization techniques if applicable
+- Include instructions for testing the component
+- Suggest documentation requirements for the component
+- Thoroughly Document all context at the top of the each file
+
+General Component Creation Guidelines:
+
+- Prioritize reusability and modularity
+- Ensure consistent naming conventions
+- Follow React best practices and patterns
+- Implement proper prop validation
+- Consider internationalization requirements
+- Optimize for SEO when applicable
+- Ensure compatibility with different browsers and devices
+
+General Rules:
+
+- Enable strict TypeScript (strict: true in tsconfig.json)
+- Avoid 'any', prefer 'unknown' with runtime checks
+- Explicitly type function inputs and outputs
+- Use advanced TypeScript features (type guards, mapped types, conditional types)
+- Organize project structure: components, pages, hooks, utils, styles, contracts, services
+- Separate concerns: presentational components, business logic, side effects
+  Next.js Rules:
+- Use dynamic routes with bracket notation ([id].tsx)
+- Validate and sanitize route parameters
+- Prefer flat, descriptive routes
+- Use getServerSideProps for dynamic data, getStaticProps/getStaticPaths for static data
+- Implement Incremental Static Regeneration (ISR) where appropriate
+- Use next/image for optimized images
+- Configure image layout, priority, sizes, and srcSet attributes
+  TypeScript Rules:
+- Enable all strict mode options in tsconfig.json
+- Explicitly type all variables, parameters, and return values
+- Use utility types, mapped types, and conditional types
+- Prefer 'interface' for extendable object shapes
+- Use 'type' for unions, intersections, and primitive compositions
+- Document complex types with JSDoc
+- Avoid ambiguous union types, use discriminated unions when necessary
+  TailwindCSS and DaisyUI Rules:
+- Use TailwindCSS utility classes for styling
+- Avoid custom CSS unless absolutely necessary
+- Maintain consistent order of utility classes
+- Use Tailwind's responsive variants for adaptive designs
+- Leverage DaisyUI components for rapid development
+- Customize DaisyUI components only when necessary
+- Define and use design tokens in tailwind.config.js
+  Cairo Rules:
+- Design modular and maintainable contract structures
+- Optimize for gas efficiency
+- Minimize state changes and storage access
+- Document all contracts and functions thoroughly
+- Explain complex logic and implementation choices
+- Development Process:
+- Conduct thorough code reviews via Pull Requests
+- Include clear PR descriptions with context and screenshots
+- Implement comprehensive automated testing (unit, integration, e2e)
+- Prioritize meaningful tests over high coverage numbers
+- Use Conventional Commits for commit messages (feat:, fix:, docs:, chore:)
+- Make small, incremental commits for easier review and debugging
+  Tech Stack:
+- Frontend: NextJS (for admin panel, if required)
+- Authentication: JSON Web Tokens (JWT)
+- Version Control: Git
+- Deployment: Docker
+- Precision in User Requirements:
+- Summarize the flow, list all the edge cases, process and outline the business logic in pseudocode before coding.
+- Strategic Planning with Pseudocode:
+- Begin each feature with detailed pseudocode.
+- Example: Provide pseudocode for the weekly scoring process, detailing steps from game result input to entry status updates.
+- Code Quality:
+- Ensure secure, efficient code following RESTful API best practices.
+- Implement proper error handling and input validation.
+<!-- - User Flow:
+- Complete payment for Requests
+- Admin approves/rejects Requests
+- Approved Requests become Entries
+- Entry Management:
+- Each user can have up to 3 Entries per Pool
+- Entries are numbered 1, 2, 3
+- Picks are made and tracked separately for each Entry
+- Pick Management:
+- Users make Picks for each Entry separately
+- Picks can be updated until the deadline (game start or 1 PM Sunday of the current week of the pick)
+- Scoring and Ranking:
+- Picks scored after games complete
+- Win: Entry moves to next week
+- Loss: Entry eliminated from Pool
+- Each Entry ranked separately in Pool standings
+- Results and Standings:
+- Users view Picks/scores for each Entry separately
+- Pool standings show all Entries (multiple per User possible)
+- Pool members can view all Picks after scoring
+  Key Implementation Points:
+  - Limit Requests to 3 per User per Pool
+  - Track Requests and Entries separately (numbered 1, 2, 3)
+  - Implement payment status tracking in Request model
+  - Create Entry only after admin approval and payment completion
+  - Admin interface for managing and approving Requests
+  - Implement state transitions (Request: pending -> approved -> Entry created) -->

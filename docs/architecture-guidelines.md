@@ -27,7 +27,7 @@ src/
 ├── utils/         # Helper functions
 ├── api/           # API service layer
 ├── hooks/         # Custom React hooks
-└── config/        # Environment and app-level configs
+└── config/        # Environment and app-level config
 ```
 
 7. **Single Responsibility**
@@ -60,7 +60,7 @@ src/
 
 12. **Lightweight State Management**
 
-- Use tools like Zustand or Context API unless the app grows complex.
+- Use tools like redux-toolkit or useState or Context API unless the app grows complex.
 
 13. **Centralized State**
 

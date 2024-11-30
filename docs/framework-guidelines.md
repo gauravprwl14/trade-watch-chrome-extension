@@ -1,5 +1,3 @@
-### 2. **Framework-Guidelines.md**
-
 # Framework Guidelines
 
 ## Framework

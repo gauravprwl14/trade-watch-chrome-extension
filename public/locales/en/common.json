@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "auth": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "errors": {
+      "invalidEmail": "Please enter a valid email",
+      "invalidPassword": "Password must be at least 8 characters"
+    }
+  }
+}
