@@ -29,3 +29,8 @@
 - No deprecated APIs.
 - Avoid experimental features in production.
 - No direct database access from the frontend.
+
+## Naming Conventions
+
+- Constants are all uppercase separated by underscores. Eg: API_URL
+- Variables and components start with lowercase letter. Eg: MyComponent
