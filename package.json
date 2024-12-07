@@ -7,7 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build:extension": "npm run build && npm run package:extension",
+    "build:prod": "cross-env NODE_ENV=production next build",
+    "package:extension": "node scripts/package-extension.js",
+    "watch:extension": "nodemon --watch src --ext ts,tsx,css,json --exec 'npm run build:extension'",
+    "clean": "rimraf dist extension.zip",
+    "prebuild:extension": "npm run clean",
+    "postbuild:extension": "echo 'Extension build complete! Ready to load in Chrome.'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -44,7 +51,11 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "cross-env": "^7.0.3",
+    "rimraf": "^5.0.1",
+    "archiver": "^6.0.1",
+    "nodemon": "^3.0.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
